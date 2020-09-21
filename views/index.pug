@@ -3,7 +3,7 @@ extends layout
 block content
   h1 Hello MVC
   p Ingresá el ID del usuario que querés buscar.
-  form.form-inline(action='/search' method='get')
+   form.form-inline(action='/search' method='get')
     div.form-group.mr-sm-3
       input.form-control(type='text' name='id' placeholder='ID')
     input.form-control.btn.btn-primary(type='submit' value='Buscar')
@@ -16,7 +16,7 @@ block content
         th Email
         th Cumpleaños
         th Edad
-      tbody
+      tbody    
         each user in users
           tr
             td= user.id
@@ -25,7 +25,7 @@ block content
             td= user.birthday.toLocaleDateString('es-AR')
             td= user.age
   else
-    h3 No hay resultados
+    h3 No hay resultados      
   hr
-  h4 Más info en
-    a(href='https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website%27) MDN
+  h4 Más info en 
+    a(href='https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website') MDN
